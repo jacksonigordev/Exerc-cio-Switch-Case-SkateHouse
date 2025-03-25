@@ -1,0 +1,184 @@
+using System.ComponentModel.Design;
+
+namespace train
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Bora andar de skate!");
+            Thread.Sleep(1000);
+            Console.WriteLine("Aperte 'A' para iniciar ou 'S' para sair.");
+
+            char start = Console.ReadKey(true).KeyChar;
+            if (start == 'A' || start == 'a')
+            {
+                Console.WriteLine("Bora começar o Rolê!");
+            }
+            else if (start == 's' || start == 'S')
+            {
+                Console.WriteLine("Suave! Volte outra hora para darmos um rolê!");
+                return;
+            }
+
+            string apenasPersonagem = "";                       
+            inicio:
+            Console.WriteLine("\nSelecione seu Personagem");           
+            Console.WriteLine("Digite de 1 a 5 para escolher sua Lenda do skate Mundial");
+            Console.WriteLine("(1) Lenda: Nyjah Huston");
+            Console.WriteLine("(2) Lenda: Tony Hawk");
+            Console.WriteLine("(3) Lenda: Chaz Ortiz");
+            Console.WriteLine("(4) Lenda: Luan de Oliveira");
+            Console.WriteLine("(5) Lenda: Rayssa Leal");
+            Console.WriteLine("(6) Reiniciar Jogo");
+
+            char personagem = Convert.ToChar(Console.ReadKey(true).KeyChar.ToString());
+            switch (personagem)
+            {
+                case '1':
+                    apenasPersonagem = "Nyjah Huston";
+                    Console.WriteLine("Você selecionou Nyjah Huston.");
+                    Thread.Sleep(1000);
+                    break;
+                case '2':
+                    apenasPersonagem = "Tony Hawk";
+                    Console.WriteLine("Você selecionou Tony Hawk.");
+                    Thread.Sleep(1000);
+                    break;
+                case '3':
+                    apenasPersonagem = "Chaz Ortiz";
+                    Console.WriteLine("Você selecionou Chaz Ortiz.");
+                    Thread.Sleep(1000);
+                    break;
+                case '4':
+                    apenasPersonagem = "Luan de Oliveira";
+                    Console.WriteLine("Você selecionou Luan de Oliveira.");
+                    Thread.Sleep(1000);
+                    break;
+                case '5':
+                    apenasPersonagem = "Rayssa Leal";
+                    Console.WriteLine("Você selecionou Rayssa Leal.");
+                    Thread.Sleep(1000);
+                    break;
+                case '6':
+                    Console.WriteLine("Suave! Volte outra hora para darmos um rolê!.");
+                    Thread.Sleep(3000);
+                    return;
+                default:
+                    Console.WriteLine("Opção invalida.");
+                    Thread.Sleep(3000);
+                    return;
+            }
+
+            string apenasSkate = "";
+
+            Console.WriteLine("\nEsolha seu Skate");
+            Thread.Sleep(1000);
+            Console.WriteLine("Digite de 1 a 5 para escolher seu Skate");
+            Console.WriteLine("(1) Flip - Rodney Mullen");
+            Console.WriteLine("(2) DGK - Stevie Williams");
+            Console.WriteLine("(3) Zero - Jamie Thomas");
+            Console.WriteLine("(4) Element - Levi Brown");
+            Console.WriteLine("(5) Santa Cruz - Jim Phillips");
+            Console.WriteLine("(6) Reiniciar Jogo");            
+
+            char skate = Convert.ToChar(Console.ReadKey(true).KeyChar.ToString());
+            switch (skate)
+            {
+                case '1':
+                    apenasSkate = "Flip de Rodney Mullen.";
+                    Console.WriteLine("Você selecionou o Skate (Flip) de Rodney Mullen.");
+                    break;
+                case '2':
+                    apenasSkate = "DGK de Stevie Williams.";
+                    Console.WriteLine("Você selecionou o Skate (DGK) de Stevie Williams.");
+                    break;
+                case '3':
+                    apenasSkate = "Zero de Jamie Thomas.";
+                    Console.WriteLine("Você selecionou o Skate (Zero) de Jamie Thomas.");
+                    break;
+                case '4':
+                    apenasSkate = "Element de Levi Brown.";
+                    Console.WriteLine("Você selecionou o Skate (Element) de Levi Brown.");
+                    break;
+                case '5':
+                    apenasSkate = "Santa Cruz de Jim Phillips.";
+                    Console.WriteLine("Você selecionou o Skate (Santa Cruz) de Jim Phillips.");
+                    break;
+                case '6':
+                    Console.WriteLine("Suave! Volte outra hora para darmos um rolê!.");
+                    Thread.Sleep(3000);
+                    return;
+                default:
+                    Console.WriteLine("Opção invalida.");
+                    break;
+                }
+            string apenasPista = "";
+
+            Console.WriteLine("\nEscolha a Pista que deseja dar o rolê!");
+            Thread.Sleep(1000);
+            Console.WriteLine("(1) Tampa - Flórida.");
+            Console.WriteLine("(2) Komune - Indonésia.");
+            Console.WriteLine("(3) MACBA Barcelona - Espanha.");
+            Console.WriteLine("(4) FDR - Filadélfia.");
+            Console.WriteLine("(5) Nações Indigenas - Campo Grande.");
+            Console.WriteLine("(6) Reiniciar Jogo.");
+            char pista = Convert.ToChar(Console.ReadKey(true).KeyChar.ToString());
+            switch (pista)
+            {
+                case'1':
+                    apenasPista = "Tampa - Flórida.";
+                    Console.WriteLine("Você selecionou Tampa - Flórida.");
+                    break;
+                case '2':
+                    apenasPista = "Komune - Indonésia.";
+                    Console.WriteLine("Você selecionou Komune - Indonésia.");
+                    break;
+                case '3':
+                    apenasPista = "MACBA Barcelona - Espanha.";
+                    Console.WriteLine("Você selecionou MACBA Barcelona - Espanha.");
+                    break;
+                case '4':
+                    apenasPista = "FDR - Filadélfia.";
+                    Console.WriteLine("Você selecionou FDR - Filadélfia.");
+                    break;
+                case '5':
+                    apenasPista = "Nações Indigenas - Campo Grande.";
+                    Console.WriteLine("Você selecionou Nações Indigenas - Campo Grande.");
+                    break;
+                case '6':
+                    Console.WriteLine("Suave! Volte outra hora para darmos um rolê!.");
+                    Thread.Sleep(3000);
+                    return;
+                default:
+                    Console.WriteLine("Opção invalida.");
+                    break;
+            }
+
+            Console.WriteLine("\n====== Menu de Informações ======");
+            Console.WriteLine($"Você selecionou: {apenasPersonagem}");
+            Console.WriteLine($"Você selecionou: {apenasSkate}");
+            Console.WriteLine($"Você selecionou: {apenasPista}");
+            Console.WriteLine("===================================");
+
+            Console.WriteLine("\nDeseja INICIAR? digite 1 para SIM e 2 para VOLTAR");
+            char iniciar = Console.ReadKey(true).KeyChar;
+            if (iniciar == '1')
+            {
+                Console.WriteLine("\nAnimal sua combinação! Vai ser o melhor rolê da sua vida!");
+            }
+            else if (iniciar == '2')
+            {
+                Console.WriteLine("Vamos lá, temos mais combinações TOP para fazer seu rolê render muito mais!");
+                goto inicio;
+            }
+            Console.WriteLine($"Seu personagem {apenasPersonagem}, seu Skate {apenasSkate} e sua pista {apenasPista}\nVai ser um maravilhoso rolê, acredite!");
+            
+
+            Console.WriteLine("Pressione uma tecla para encerrar");
+            Console.ReadKey();
+
+           
+        }
+    }
+}
